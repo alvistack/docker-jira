@@ -12,8 +12,8 @@ Learn more about Jira: <https://www.atlassian.com/software/jira>
 ## Supported Tags and Respective `Dockerfile` Links
 
   - [`latest` (master/Dockerfile)](https://github.com/alvistack/docker-jira/blob/master/Dockerfile)
+  - [`8.7` (8.7/Dockerfile)](https://github.com/alvistack/docker-jira/blob/8.7/Dockerfile)
   - [`8.6` (8.6/Dockerfile)](https://github.com/alvistack/docker-jira/blob/8.6/Dockerfile)
-  - [`8.5` (8.5/Dockerfile)](https://github.com/alvistack/docker-jira/blob/8.5/Dockerfile)
 
 ## Overview
 
