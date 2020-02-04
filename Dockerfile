@@ -20,7 +20,7 @@ ENV SHELL  "/bin/bash"
 ENV TZ     "UTC"
 
 ENV OPENJDK_RELEASE              "8"
-ENV JIRA_VERSION                 "8.6.1"
+ENV JIRA_VERSION                 "8.7.0"
 ENV JIRA_OWNER                   "jira"
 ENV JIRA_GROUP                   "jira"
 ENV JIRA_HOME                    "/var/atlassian/application-data/jira"
