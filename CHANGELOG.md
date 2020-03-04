@@ -1,10 +1,15 @@
 # Docker Image Packaging for Atlassian JIRA
 
-## 8.6.1-XalvistackY - TBC
+## 8.7.1-XalvistackY - TBC
+
+### Major Changes
+
+## 8.7.1-4alvistack1 - 2020-03-04
 
 ### Major Changes
 
   - Revamp with Molecule and `docker commit`
+  - Hotfix for systemd
 
 ## 8.6.1-3alvistack1 - 2020-01-15
 
