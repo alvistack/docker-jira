@@ -14,21 +14,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-namespace: alvistack
-name: docker-jira
-description: Docker Image Packaging for Atlassian Jira
-
-version: VERSION
-readme: README.md
-license: Apache-2.0
-
-repository: https://github.com/alvistack/docker-jira
-documentation: https://github.com/alvistack/docker-jira
-homepage: https://github.com/alvistack/docker-jira
-issues: https://github.com/alvistack/docker-jira/issues
-
-dependencies: {}
-tags:
-  - system
-authors:
-  - Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
+jira_version: "8.7.1"
