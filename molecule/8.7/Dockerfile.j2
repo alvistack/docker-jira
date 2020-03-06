@@ -65,8 +65,7 @@ EXPOSE 8080
 ENTRYPOINT [ "tini", "-g", "--", "docker-entrypoint.sh" ]
 CMD        [ "start-jira.sh", "-fg" ]
 
-# Prepare APT dependencies
+# Explicitly set system user UID/GID
 RUN set -ex \
-    && apt-get update \
-    && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates curl gcc iproute2 python3 python3-dev sudo \
-    && rm -rf /var/lib/apt/lists/*
+    && groupadd -r $JIRA_OWNER \
+    && useradd -r -g $JIRA_GROUP -d $JIRA_HOME -M -s /usr/sbin/nologin $JIRA_OWNER
