@@ -1,6 +1,6 @@
 # Docker Image Packaging for Atlassian Jira
 
-[![Travis](https://img.shields.io/travis/alvistack/docker-jira.svg)](https://travis-ci.org/alvistack/docker-jira)
+[![Travis](https://img.shields.io/travis/com/alvistack/docker-jira.svg)](https://travis-ci.com/alvistack/docker-jira)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-jira.svg)](https://github.com/alvistack/docker-jira/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-jira.svg)](https://github.com/alvistack/docker-jira/blob/master/LICENSE)
 [![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/jira.svg)](https://hub.docker.com/r/alvistack/jira/)
@@ -149,7 +149,7 @@ The `latest` tag matches the most recent [GitHub Release](https://github.com/alv
 
 ### `alvistack/jira:<version>`
 
-The version tags are rolling release rebuild by [Travis](https://travis-ci.org/alvistack/docker-jira) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
+The version tags are rolling release rebuild by [Travis](https://travis-ci.com/alvistack/docker-jira) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
 
 ## License
 
