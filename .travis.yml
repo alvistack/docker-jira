@@ -8,8 +8,8 @@ language: shell
 
 env:
   jobs:
+    - MOLECULE_SCENARIO_NAME="8.9"
     - MOLECULE_SCENARIO_NAME="8.8"
-    - MOLECULE_SCENARIO_NAME="8.7"
 
 before_install:
   - |
