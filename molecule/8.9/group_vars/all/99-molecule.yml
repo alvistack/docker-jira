@@ -14,32 +14,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-driver:
-  name: docker
-platforms:
-  - name: ${MOLECULE_INSTANCE_NAME}-1
-    dockerfile: Dockerfile.j2
-lint: |
-  set -ex
-  yamllint .
-  ansible-lint
-  flake8
-dependency:
-  name: galaxy
-  options:
-    role-file: ansible-role-requirements.yml
-    roles-path: /.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles
-    ignore-errors: true
-provisioner:
-  name: ansible
-  config_options:
-    defaults:
-      forks: 20
-    ssh_connection:
-      pipelining: true
-      ssh_args: -o ControlMaster=auto -o ControlPersist=600s
-  inventory:
-    links:
-      group_vars: group_vars
-verifier:
-  name: ansible
+jira_version: "8.9.0"
