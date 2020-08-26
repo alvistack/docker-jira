@@ -1,9 +1,14 @@
 # Docker Image Packaging for Atlassian JIRA
 
-## 8.9.0-XalvistackY - TBC
+## 8.11.1-XalvistackY - TBC
 
 ### Major Changes
 
+## 8.11.1-4alvistack3 - 2020-08-26
+
+### Major Changes
+
+  - Upgrade minimal Ansible Lint support to 4.3.2
   - Upgrade Travis CI test as Ubuntu Focal based
   - Upgrade minimal Ansible support to 2.10.0
 
