@@ -11,8 +11,8 @@ Learn more about Jira: <https://www.atlassian.com/software/jira>
 
 ## Supported Tags and Respective `Dockerfile` Links
 
-  - [`8.12`, `latest`](https://github.com/alvistack/docker-jira/blob/master/molecule/8.12/Dockerfile.j2)
-  - [`8.11`](https://github.com/alvistack/docker-jira/blob/master/molecule/8.11/Dockerfile.j2)
+  - [`8.13`, `latest`](https://github.com/alvistack/docker-jira/blob/master/molecule/8.13/Dockerfile.j2)
+  - [`8.12`](https://github.com/alvistack/docker-jira/blob/master/molecule/8.12/Dockerfile.j2)
 
 ## Overview
 
