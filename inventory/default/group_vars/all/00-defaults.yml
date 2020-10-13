@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-openjdk_release: "8"
+openjdk_release: "11"
 jira_version: "8.13.0"
 jira_owner: "jira"
 jira_group: "jira"
@@ -30,5 +30,5 @@ jira_catalina_context_path: "/"
 jira_jvm_support_recommended_args: >-
   -Datlassian.plugins.enable.wait=300
   -XX:+UnlockExperimentalVMOptions
-  -XX:+UseCGroupMemoryLimitForHeap
-  -XX:MaxRAMFraction=1
+  -XX:+UseContainerSupport
+  -XX:+UseZGC
