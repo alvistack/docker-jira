@@ -1,6 +1,6 @@
 # Docker Image Packaging for Atlassian JIRA
 
-## 8.13.0-XalvistackY - TBC
+## 8.13.1-XalvistackY - TBC
 
 ### Major Changes
 
