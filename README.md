@@ -11,8 +11,8 @@ Learn more about Jira: <https://www.atlassian.com/software/jira>
 
 ## Supported Tags and Respective Packer Template Links
 
-  - [`8.14`, `latest`](https://github.com/alvistack/docker-jira/blob/master/packer/8.14/packer.json)
-  - [`8.13`](https://github.com/alvistack/docker-jira/blob/master/packer/8.13/packer.json)
+  - [`8.14`, `latest`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-8.14/packer.json)
+  - [`8.13`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-8.13/packer.json)
 
 ## Overview
 
