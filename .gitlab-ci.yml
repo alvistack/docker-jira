@@ -60,14 +60,14 @@ default:
         sudo docker push $_DOCKER_REPO:$_PACKER_BUILDER_VERSION
       fi
 
+docker-8.14:
+  <<: *job-packer
+  variables:
+    _PACKER_BUILDER_PROVIDER: "docker"
+    _PACKER_BUILDER_VERSION: "8.14"
+
 docker-8.13:
   <<: *job-packer
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "8.13"
-
-docker-8.12:
-  <<: *job-packer
-  variables:
-    _PACKER_BUILDER_PROVIDER: "docker"
-    _PACKER_BUILDER_VERSION: "8.12"
