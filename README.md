@@ -1,9 +1,9 @@
 # Docker Image Packaging for Atlassian Jira
 
-[![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-jira/master)](https://gitlab.com/alvistack/docker-jira/-/pipelines)
+[![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-jira/master)](https://gitlab.com/alvistack/docker-jira/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-jira.svg)](https://github.com/alvistack/docker-jira/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-jira.svg)](https://github.com/alvistack/docker-jira/blob/master/LICENSE)
-[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/jira.svg)](https://hub.docker.com/r/alvistack/jira/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/jira-8.14.svg)](https://hub.docker.com/r/alvistack/jira-8.14)
 
 Jira Software unlocks the power of agile by giving your team the tools to easily create & estimate stories, build a sprint backlog, identify team commitments & velocity, visualize team activity, and report on your team's progress.
 
@@ -11,8 +11,10 @@ Learn more about Jira: <https://www.atlassian.com/software/jira>
 
 ## Supported Tags and Respective Packer Template Links
 
-  - [`8.14`, `latest`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-8.14/packer.json)
-  - [`8.13`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-8.13/packer.json)
+  - [`alvistack/jira-8.14`](https://hub.docker.com/r/alvistack/jira-8.14)
+      - [`packer/docker-8.14/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-8.14/packer.json)
+  - [`alvistack/jira-8.13`](https://hub.docker.com/r/alvistack/jira-8.13)
+      - [`packer/docker-8.13/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-8.13/packer.json)
 
 ## Overview
 
@@ -142,13 +144,13 @@ For evaluations you can use the built-in database that will store its files in t
 
 ## Versioning
 
-### `alvistack/jira:latest`
+### `YYYYMMDD.Y.Z`
 
-The `latest` tag matches the most recent [GitHub Release](https://github.com/alvistack/docker-jira/releases) of this repository. Thus using `alvistack/jira:latest` or `alvistack/jira` will ensure you are running the most up to date stable version of this image.
+Release tags could be find from [GitHub Release](https://github.com/alvistack/docker-jira/releases) of this repository. Thus using these tags will ensure you are running the most up to date stable version of this image.
 
-### `alvistack/jira:<version>`
+### `YYYYMMDD.0.0`
 
-The version tags are rolling release rebuild by [Travis](https://travis-ci.com/alvistack/docker-jira) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
+Version tags ended with `.0.0` are rolling release rebuild by [GitLab pipeline](https://gitlab.com/alvistack/docker-jira/-/pipelines) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
 
 ## License
 
