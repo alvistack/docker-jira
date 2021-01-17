@@ -15,7 +15,7 @@
 # limitations under the License.
 
 openjdk_release: "8"
-jira_version: "8.14.0"
+jira_version: "8.14.1"
 jira_owner: "jira"
 jira_group: "jira"
 jira_home: "/var/atlassian/application-data/jira"
