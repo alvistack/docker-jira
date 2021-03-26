@@ -93,6 +93,31 @@ default:
   before_script:
     - *script-git-submodule
 
+build:docker-8.16:
+  <<: *job-packer-build
+  stage: build
+  cache:
+    key: "$CI_PIPELINE_ID-docker-8.16"
+    paths:
+      - packer/*/output-docker/*.tar.gz
+  variables:
+    _PACKER_BUILDER_PROVIDER: "docker"
+    _PACKER_BUILDER_VERSION: "8.16"
+
+deploy:docker-8.16:
+  <<: *job-docker-push
+  stage: deploy
+  cache:
+    key: "$CI_PIPELINE_ID-docker-8.16"
+    paths:
+      - packer/*/output-docker/*.tar.gz
+    policy: pull
+  variables:
+    _PACKER_BUILDER_PROVIDER: "docker"
+    _PACKER_BUILDER_VERSION: "8.16"
+  needs:
+    - build:docker-8.16
+
 build:docker-8.15:
   <<: *job-packer-build
   stage: build
@@ -117,28 +142,3 @@ deploy:docker-8.15:
     _PACKER_BUILDER_VERSION: "8.15"
   needs:
     - build:docker-8.15
-
-build:docker-8.14:
-  <<: *job-packer-build
-  stage: build
-  cache:
-    key: "$CI_PIPELINE_ID-docker-8.14"
-    paths:
-      - packer/*/output-docker/*.tar.gz
-  variables:
-    _PACKER_BUILDER_PROVIDER: "docker"
-    _PACKER_BUILDER_VERSION: "8.14"
-
-deploy:docker-8.14:
-  <<: *job-docker-push
-  stage: deploy
-  cache:
-    key: "$CI_PIPELINE_ID-docker-8.14"
-    paths:
-      - packer/*/output-docker/*.tar.gz
-    policy: pull
-  variables:
-    _PACKER_BUILDER_PROVIDER: "docker"
-    _PACKER_BUILDER_VERSION: "8.14"
-  needs:
-    - build:docker-8.14

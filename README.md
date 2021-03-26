@@ -3,7 +3,7 @@
 [![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-jira/master)](https://gitlab.com/alvistack/docker-jira/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-jira.svg)](https://github.com/alvistack/docker-jira/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-jira.svg)](https://github.com/alvistack/docker-jira/blob/master/LICENSE)
-[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/jira-8.15.svg)](https://hub.docker.com/r/alvistack/jira-8.15)
+[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/jira-8.16.svg)](https://hub.docker.com/r/alvistack/jira-8.16)
 
 Jira Software unlocks the power of agile by giving your team the tools to easily create & estimate stories, build a sprint backlog, identify team commitments & velocity, visualize team activity, and report on your team's progress.
 
@@ -11,10 +11,10 @@ Learn more about Jira: <https://www.atlassian.com/software/jira>
 
 ## Supported Tags and Respective Packer Template Links
 
+  - [`alvistack/jira-8.16`](https://hub.docker.com/r/alvistack/jira-8.16)
+      - [`packer/docker-8.16/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-8.16/packer.json)
   - [`alvistack/jira-8.15`](https://hub.docker.com/r/alvistack/jira-8.15)
       - [`packer/docker-8.15/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-8.15/packer.json)
-  - [`alvistack/jira-8.14`](https://hub.docker.com/r/alvistack/jira-8.14)
-      - [`packer/docker-8.14/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-8.14/packer.json)
 
 ## Overview
 
