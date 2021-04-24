@@ -34,7 +34,7 @@ Volume permission is NOT managed by entry scripts. To get started you can use a 
 Start Atlassian Jira Server:
 
     # Pull latest image
-    docker pull alvistack/jira
+    docker pull alvistack/jira-8.16
     
     # Run as detach
     docker run \
@@ -42,7 +42,7 @@ Start Atlassian Jira Server:
         --name jira \
         --publish 8080:8080 \
         --volume /var/atlassian/application-data/jira:/var/atlassian/application-data/jira \
-        alvistack/jira
+        alvistack/jira-8.16
 
 **Success**. Jira is now available on <http://localhost:8080>
 
