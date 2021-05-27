@@ -27,7 +27,6 @@
     fi
     sudo systemctl start docker.service
     sh -x -c "docker --version"
-    echo $DOCKER_HUB_TOKEN | docker login --username=$DOCKER_HUB_USERNAME --password-stdin
 
 .script-bootstrap-python: &script-bootstrap-python
   - |
@@ -64,6 +63,7 @@
 
 .script-packer-build: &script-packer-build
   - |
+    echo $DOCKER_HUB_TOKEN | docker login --username=$DOCKER_HUB_USERNAME --password-stdin
     cd $CI_PROJECT_DIR/packer/$_PACKER_BUILDER_PROVIDER-$_PACKER_BUILDER_VERSION
     packer build packer.json
 
@@ -105,6 +105,31 @@ default:
   before_script:
     - *script-git-submodule
 
+build:docker-8.17:
+  <<: *job-packer-build
+  stage: build
+  cache:
+    key: "$CI_PIPELINE_ID-docker-8.17"
+    paths:
+      - packer/*/output-docker
+  variables:
+    _PACKER_BUILDER_PROVIDER: "docker"
+    _PACKER_BUILDER_VERSION: "8.17"
+
+deploy:docker-8.17:
+  <<: *job-docker-push
+  stage: deploy
+  cache:
+    key: "$CI_PIPELINE_ID-docker-8.17"
+    paths:
+      - packer/*/output-docker
+    policy: pull
+  variables:
+    _PACKER_BUILDER_PROVIDER: "docker"
+    _PACKER_BUILDER_VERSION: "8.17"
+  needs:
+    - build:docker-8.17
+
 build:docker-8.16:
   <<: *job-packer-build
   stage: build
@@ -129,28 +154,3 @@ deploy:docker-8.16:
     _PACKER_BUILDER_VERSION: "8.16"
   needs:
     - build:docker-8.16
-
-build:docker-8.15:
-  <<: *job-packer-build
-  stage: build
-  cache:
-    key: "$CI_PIPELINE_ID-docker-8.15"
-    paths:
-      - packer/*/output-docker
-  variables:
-    _PACKER_BUILDER_PROVIDER: "docker"
-    _PACKER_BUILDER_VERSION: "8.15"
-
-deploy:docker-8.15:
-  <<: *job-docker-push
-  stage: deploy
-  cache:
-    key: "$CI_PIPELINE_ID-docker-8.15"
-    paths:
-      - packer/*/output-docker
-    policy: pull
-  variables:
-    _PACKER_BUILDER_PROVIDER: "docker"
-    _PACKER_BUILDER_VERSION: "8.15"
-  needs:
-    - build:docker-8.15
