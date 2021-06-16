@@ -4,9 +4,7 @@
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-jira.svg)](https://github.com/alvistack/docker-jira/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-jira.svg)](https://github.com/alvistack/docker-jira/blob/master/LICENSE)
 [![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/jira-8.17.svg)](https://hub.docker.com/r/alvistack/jira-8.17)
-
 Jira Software unlocks the power of agile by giving your team the tools to easily create & estimate stories, build a sprint backlog, identify team commitments & velocity, visualize team activity, and report on your team's progress.
-
 Learn more about Jira: <https://www.atlassian.com/software/jira>
 
 ## Supported Tags and Respective Packer Template Links
@@ -19,7 +17,6 @@ Learn more about Jira: <https://www.atlassian.com/software/jira>
 ## Overview
 
 This Docker container makes it easy to get an instance of Jira up and running.
-
 Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with some minor hack:
 
   - Packaging by Packer Docker builder and Ansible provisioner in single layer
@@ -28,38 +25,29 @@ Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with s
 ### Quick Start
 
 For the `JIRA_HOME` directory that is used to store the repository data (amongst other things) we recommend mounting a host directory as a [data volume](https://docs.docker.com/engine/tutorials/dockervolumes/#/data-volumes), or via a named volume if using a docker version \>= 1.9.
-
 Volume permission is NOT managed by entry scripts. To get started you can use a data volume, or named volumes.
-
 Start Atlassian Jira Server:
-
-    # Pull latest image
-    docker pull alvistack/jira-8.17
-    
-    # Run as detach
-    docker run \
-        -itd \
-        --name jira \
-        --publish 8080:8080 \
-        --volume /var/atlassian/application-data/jira:/var/atlassian/application-data/jira \
-        alvistack/jira-8.17
-
+\# Pull latest image
+docker pull alvistack/jira-8.17
+\# Run as detach
+docker run   
+\-itd   
+\--name jira   
+\--publish 8080:8080   
+\--volume /var/atlassian/application-data/jira:/var/atlassian/application-data/jira   
+alvistack/jira-8.17
 **Success**. Jira is now available on <http://localhost:8080>
-
 Please ensure your container has the necessary resources allocated to it. We recommend 2GiB of memory allocated to accommodate both the application server and the git processes. See [Supported Platforms](https://confluence.atlassian.com/display/JIRA/Supported+Platforms) for further information.
 
 ## Upgrade
 
 To upgrade to a more recent version of Jira Server you can simply stop the Jira
 container and start a new one based on a more recent image:
-
-    docker stop jira
-    docker rm jira
-    docker run ... (see above)
-
+docker stop jira
+docker rm jira
+docker run ... (see above)
 As your data is stored in the data volume directory on the host, it will still
 be available after the upgrade.
-
 Note: Please make sure that you don't accidentally remove the jira container and its volumes using the -v option.
 
 ## Backup
