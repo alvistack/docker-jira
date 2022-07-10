@@ -1,6 +1,6 @@
 # Docker Image Packaging for Atlassian Jira
 
-<img src="/alvistack.svg" width="75" alt="AlviStack">
+<a href="https://alvistack.com" title="AlviStack" target="_blank"><img src="/alvistack.svg" height="75" alt="AlviStack"></a>
 
 [![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-jira/master)](https://gitlab.com/alvistack/docker-jira/-/pipelines)
 [![GitHub tag](https://img.shields.io/github/tag/alvistack/docker-jira.svg)](https://github.com/alvistack/docker-jira/tags)
