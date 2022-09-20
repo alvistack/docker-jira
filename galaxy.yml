@@ -15,7 +15,7 @@
 # limitations under the License.
 
 namespace: alvistack
-name: docker-jira
+name: jira
 description: Docker Image Packaging for Atlassian Jira
 
 version: 0.0.0
