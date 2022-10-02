@@ -94,15 +94,16 @@
         name: jira
 
     - name: symlink files
-      ansible.builtin.shell: |
-        set -euxo pipefail
-        cd /opt/atlassian/jira/lib
-        rm -rf *postgresql*.jar
-        cp -rfp /usr/share/java/postgresql-*.jar .
-        rm -rf *mysql-connector-java*.jar
-        cp -rfp /usr/share/java/mysql-connector-java-*.jar .
-        chown -Rf jira:jira *.jar
-        chmod 0644 *.jar
+      ansible.builtin.shell:
+        cmd: |
+          set -euxo pipefail
+          cd /opt/atlassian/jira/lib
+          rm -rf *postgresql*.jar
+          cp -rfp /usr/share/java/postgresql-*.jar .
+          rm -rf *mysql-connector-java*.jar
+          cp -rfp /usr/share/java/mysql-connector-java-*.jar .
+          chown -Rf jira:jira *.jar
+          chmod 0644 *.jar
       args:
         executable: "/bin/bash"
       changed_when: false
