@@ -15,14 +15,6 @@ if [ "$(id -u)" = '0' ]; then
     sed -i "s/localhost/$_HOSTNAME/g" /etc/ansible/hosts
 fi
 
-# Allow the container to be stated with `--user`.
-if [ "$1" = 'start-jira.sh' ] && [ "$(id -u)" = '0' ]; then
-    mkdir -p $JIRA_HOME $JIRA_HOME/shared
-    chown $JIRA_OWNER:$JIRA_GROUP $JIRA_HOME $JIRA_HOME/shared
-    chmod 0755 $JIRA_HOME $JIRA_HOME/shared
-    exec gosu $JIRA_OWNER "$BASH_SOURCE" "$@"
-fi
-
 # Verify configuration with Ansible.
 if [ "$1" = 'start-jira.sh' ]; then
     ansible-playbook /etc/ansible/playbooks/verify.yml
