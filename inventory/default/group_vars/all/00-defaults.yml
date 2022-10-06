@@ -32,6 +32,4 @@ jira_catalina_context_path: "/"
 jira_jvm_support_recommended_args: >-
   -Datlassian.plugins.enable.wait=300
   -XX:+UnlockExperimentalVMOptions
-  -XX:+UseCGroupMemoryLimitForHeap
-  -XX:MaxRAMFraction=1
 jira_session_timeout: "120"
