@@ -13,14 +13,14 @@ Learn more about Jira: <https://www.atlassian.com/software/jira>
 
 ## Supported Tags and Respective Packer Template Links
 
-  - [`alvistack/jira-9.3`](https://hub.docker.com/r/alvistack/jira-9.3)
-      - [`packer/docker-9.3/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.3/packer.json)
-  - [`alvistack/jira-9.2`](https://hub.docker.com/r/alvistack/jira-9.2)
-      - [`packer/docker-9.2/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.2/packer.json)
-  - [`alvistack/jira-8.22`](https://hub.docker.com/r/alvistack/jira-8.22)
-      - [`packer/docker-8.22/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-8.22/packer.json)
-  - [`alvistack/jira-8.20`](https://hub.docker.com/r/alvistack/jira-8.20)
-      - [`packer/docker-8.20/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-8.20/packer.json)
+-   [`alvistack/jira-9.3`](https://hub.docker.com/r/alvistack/jira-9.3)
+    -   [`packer/docker-9.3/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.3/packer.json)
+-   [`alvistack/jira-9.2`](https://hub.docker.com/r/alvistack/jira-9.2)
+    -   [`packer/docker-9.2/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.2/packer.json)
+-   [`alvistack/jira-8.22`](https://hub.docker.com/r/alvistack/jira-8.22)
+    -   [`packer/docker-8.22/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-8.22/packer.json)
+-   [`alvistack/jira-8.20`](https://hub.docker.com/r/alvistack/jira-8.20)
+    -   [`packer/docker-8.20/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-8.20/packer.json)
 
 ## Overview
 
@@ -28,8 +28,8 @@ This Docker container makes it easy to get an instance of Jira up and running.
 
 Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with some minor hack:
 
-  - Packaging by Packer Docker builder and Ansible provisioner in single layer
-  - Handle `ENTRYPOINT` with [catatonit](https://github.com/openSUSE/catatonit)
+-   Packaging by Packer Docker builder and Ansible provisioner in single layer
+-   Handle `ENTRYPOINT` with [catatonit](https://github.com/openSUSE/catatonit)
 
 ### Quick Start
 
@@ -41,7 +41,7 @@ Start Atlassian Jira Server:
 
     # Pull latest image
     docker pull alvistack/jira-9.3
-    
+
     # Run as detach
     docker run \
         -itd \
@@ -82,11 +82,11 @@ Version tags ended with `.0.0` are rolling release rebuild by [GitLab pipeline](
 
 ## License
 
-  - Code released under [Apache License 2.0](LICENSE)
-  - Docs released under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
+-   Code released under [Apache License 2.0](LICENSE)
+-   Docs released under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
 
 ## Author Information
 
-  - Wong Hoi Sing Edison
-      - <https://twitter.com/hswong3i>
-      - <https://github.com/hswong3i>
+-   Wong Hoi Sing Edison
+    -   <https://twitter.com/hswong3i>
+    -   <https://github.com/hswong3i>
