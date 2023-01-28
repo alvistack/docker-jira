@@ -5,7 +5,7 @@
 [![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-jira/master)](https://gitlab.com/alvistack/docker-jira/-/pipelines)
 [![GitHub tag](https://img.shields.io/github/tag/alvistack/docker-jira.svg)](https://github.com/alvistack/docker-jira/tags)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-jira.svg)](https://github.com/alvistack/docker-jira/blob/master/LICENSE)
-[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/jira-9.5.svg)](https://hub.docker.com/r/alvistack/jira-9.5)
+[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/jira-9.6.svg)](https://hub.docker.com/r/alvistack/jira-9.6)
 
 Jira Software unlocks the power of agile by giving your team the tools to easily create & estimate stories, build a sprint backlog, identify team commitments & velocity, visualize team activity, and report on your team's progress.
 
@@ -13,6 +13,8 @@ Learn more about Jira: <https://www.atlassian.com/software/jira>
 
 ## Supported Tags and Respective Packer Template Links
 
+-   [`alvistack/jira-9.6`](https://hub.docker.com/r/alvistack/jira-9.6)
+    -   [`packer/docker-9.6/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.6/packer.json)
 -   [`alvistack/jira-9.5`](https://hub.docker.com/r/alvistack/jira-9.5)
     -   [`packer/docker-9.5/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.5/packer.json)
 -   [`alvistack/jira-9.4`](https://hub.docker.com/r/alvistack/jira-9.4)
@@ -40,7 +42,7 @@ Volume permission is NOT managed by entry scripts. To get started you can use a 
 Start Atlassian Jira Server:
 
     # Pull latest image
-    docker pull alvistack/jira-9.5
+    docker pull alvistack/jira-9.6
 
     # Run as detach
     docker run \
@@ -48,7 +50,7 @@ Start Atlassian Jira Server:
         --name jira \
         --publish 8080:8080 \
         --volume /var/atlassian/application-data/jira:/var/atlassian/application-data/jira \
-        alvistack/jira-9.5
+        alvistack/jira-9.6
 
 **Success**. Jira is now available on <http://localhost:8080>
 
