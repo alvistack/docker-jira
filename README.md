@@ -9,7 +9,7 @@ tag](https://img.shields.io/github/tag/alvistack/docker-jira.svg)](https://githu
 [![GitHub
 license](https://img.shields.io/github/license/alvistack/docker-jira.svg)](https://github.com/alvistack/docker-jira/blob/master/LICENSE)
 [![Docker
-Pulls](https://img.shields.io/docker/pulls/alvistack/jira-9.10.svg)](https://hub.docker.com/r/alvistack/jira-9.10)
+Pulls](https://img.shields.io/docker/pulls/alvistack/jira-9.11.svg)](https://hub.docker.com/r/alvistack/jira-9.11)
 
 Jira Software unlocks the power of agile by giving your team the tools
 to easily create & estimate stories, build a sprint backlog, identify
@@ -20,10 +20,10 @@ Learn more about Jira: <https://www.atlassian.com/software/jira>
 
 ## Supported Tags and Respective Packer Template Links
 
+-   [`alvistack/jira-9.11`](https://hub.docker.com/r/alvistack/jira-9.11)
+    -   [`packer/docker-9.11/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.11/packer.json)
 -   [`alvistack/jira-9.10`](https://hub.docker.com/r/alvistack/jira-9.10)
     -   [`packer/docker-9.10/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.10/packer.json)
--   [`alvistack/jira-9.9`](https://hub.docker.com/r/alvistack/jira-9.9)
-    -   [`packer/docker-9.9/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.9/packer.json)
 -   [`alvistack/jira-9.4`](https://hub.docker.com/r/alvistack/jira-9.4)
     -   [`packer/docker-9.4/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.4/packer.json)
 -   [`alvistack/jira-8.22`](https://hub.docker.com/r/alvistack/jira-8.22)
@@ -57,7 +57,7 @@ can use a data volume, or named volumes.
 Start Atlassian Jira Server:
 
     # Pull latest image
-    docker pull alvistack/jira-9.10
+    docker pull alvistack/jira-9.11
 
     # Run as detach
     docker run \
@@ -65,7 +65,7 @@ Start Atlassian Jira Server:
         --name jira \
         --publish 8080:8080 \
         --volume /var/atlassian/application-data/jira:/var/atlassian/application-data/jira \
-        alvistack/jira-9.10
+        alvistack/jira-9.11
 
 **Success**. Jira is now available on <http://localhost:8080>
 
