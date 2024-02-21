@@ -30,5 +30,6 @@ jira_catalina_connector_proxyport: ~
 jira_catalina_context_path: ~
 jira_jvm_support_recommended_args: >-
   -Datlassian.plugins.enable.wait=300
+  -XX:+IgnoreUnrecognizedVMOptions
   -XX:+UnlockExperimentalVMOptions
 jira_autologin_cookie_age: "120"
