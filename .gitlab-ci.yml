@@ -138,24 +138,24 @@ build:jira-9.14-docker:
   <<: *job-packer-build
   stage: build
   cache:
-    key: "$CI_PIPELINE_ID-jira-9.14-docker"
+    key: $CI_PIPELINE_ID-jira-9.14-docker
     paths:
       - packer/*/output-docker
   variables:
-    _IMAGE: "jira-9.14"
-    _PROVIDER: "docker"
+    _IMAGE: jira-9.14
+    _PROVIDER: docker
 
 test:jira-9.14-docker:
   <<: *job-molecule-test
   stage: test
   cache:
-    key: "$CI_PIPELINE_ID-jira-9.14-docker"
+    key: $CI_PIPELINE_ID-jira-9.14-docker
     paths:
       - packer/*/output-docker
     policy: pull
   variables:
-    _IMAGE: "jira-9.14"
-    _PROVIDER: "docker"
+    _IMAGE: jira-9.14
+    _PROVIDER: docker
   needs:
     - build:jira-9.14-docker
 
@@ -163,13 +163,13 @@ deploy:jira-9.14-docker:
   <<: *job-docker-push
   stage: deploy
   cache:
-    key: "$CI_PIPELINE_ID-jira-9.14-docker"
+    key: $CI_PIPELINE_ID-jira-9.14-docker
     paths:
       - packer/*/output-docker
     policy: pull
   variables:
-    _IMAGE: "jira-9.14"
-    _PROVIDER: "docker"
+    _IMAGE: jira-9.14
+    _PROVIDER: docker
   needs:
     - test:jira-9.14-docker
 
@@ -177,24 +177,24 @@ build:jira-9.13-docker:
   <<: *job-packer-build
   stage: build
   cache:
-    key: "$CI_PIPELINE_ID-jira-9.13-docker"
+    key: $CI_PIPELINE_ID-jira-9.13-docker
     paths:
       - packer/*/output-docker
   variables:
-    _IMAGE: "jira-9.13"
-    _PROVIDER: "docker"
+    _IMAGE: jira-9.13
+    _PROVIDER: docker
 
 test:jira-9.13-docker:
   <<: *job-molecule-test
   stage: test
   cache:
-    key: "$CI_PIPELINE_ID-jira-9.13-docker"
+    key: $CI_PIPELINE_ID-jira-9.13-docker
     paths:
       - packer/*/output-docker
     policy: pull
   variables:
-    _IMAGE: "jira-9.13"
-    _PROVIDER: "docker"
+    _IMAGE: jira-9.13
+    _PROVIDER: docker
   needs:
     - build:jira-9.13-docker
 
@@ -202,13 +202,13 @@ deploy:jira-9.13-docker:
   <<: *job-docker-push
   stage: deploy
   cache:
-    key: "$CI_PIPELINE_ID-jira-9.13-docker"
+    key: $CI_PIPELINE_ID-jira-9.13-docker
     paths:
       - packer/*/output-docker
     policy: pull
   variables:
-    _IMAGE: "jira-9.13"
-    _PROVIDER: "docker"
+    _IMAGE: jira-9.13
+    _PROVIDER: docker
   needs:
     - test:jira-9.13-docker
 
@@ -216,24 +216,24 @@ build:jira-9.12-docker:
   <<: *job-packer-build
   stage: build
   cache:
-    key: "$CI_PIPELINE_ID-jira-9.12-docker"
+    key: $CI_PIPELINE_ID-jira-9.12-docker
     paths:
       - packer/*/output-docker
   variables:
-    _IMAGE: "jira-9.12"
-    _PROVIDER: "docker"
+    _IMAGE: jira-9.12
+    _PROVIDER: docker
 
 test:jira-9.12-docker:
   <<: *job-molecule-test
   stage: test
   cache:
-    key: "$CI_PIPELINE_ID-jira-9.12-docker"
+    key: $CI_PIPELINE_ID-jira-9.12-docker
     paths:
       - packer/*/output-docker
     policy: pull
   variables:
-    _IMAGE: "jira-9.12"
-    _PROVIDER: "docker"
+    _IMAGE: jira-9.12
+    _PROVIDER: docker
   needs:
     - build:jira-9.12-docker
 
@@ -241,13 +241,13 @@ deploy:jira-9.12-docker:
   <<: *job-docker-push
   stage: deploy
   cache:
-    key: "$CI_PIPELINE_ID-jira-9.12-docker"
+    key: $CI_PIPELINE_ID-jira-9.12-docker
     paths:
       - packer/*/output-docker
     policy: pull
   variables:
-    _IMAGE: "jira-9.12"
-    _PROVIDER: "docker"
+    _IMAGE: jira-9.12
+    _PROVIDER: docker
   needs:
     - test:jira-9.12-docker
 
@@ -255,24 +255,24 @@ build:jira-9.4-docker:
   <<: *job-packer-build
   stage: build
   cache:
-    key: "$CI_PIPELINE_ID-jira-9.4-docker"
+    key: $CI_PIPELINE_ID-jira-9.4-docker
     paths:
       - packer/*/output-docker
   variables:
-    _IMAGE: "jira-9.4"
-    _PROVIDER: "docker"
+    _IMAGE: jira-9.4
+    _PROVIDER: docker
 
 test:jira-9.4-docker:
   <<: *job-molecule-test
   stage: test
   cache:
-    key: "$CI_PIPELINE_ID-jira-9.4-docker"
+    key: $CI_PIPELINE_ID-jira-9.4-docker
     paths:
       - packer/*/output-docker
     policy: pull
   variables:
-    _IMAGE: "jira-9.4"
-    _PROVIDER: "docker"
+    _IMAGE: jira-9.4
+    _PROVIDER: docker
   needs:
     - build:jira-9.4-docker
 
@@ -280,13 +280,13 @@ deploy:jira-9.4-docker:
   <<: *job-docker-push
   stage: deploy
   cache:
-    key: "$CI_PIPELINE_ID-jira-9.4-docker"
+    key: $CI_PIPELINE_ID-jira-9.4-docker
     paths:
       - packer/*/output-docker
     policy: pull
   variables:
-    _IMAGE: "jira-9.4"
-    _PROVIDER: "docker"
+    _IMAGE: jira-9.4
+    _PROVIDER: docker
   needs:
     - test:jira-9.4-docker
 
@@ -294,24 +294,24 @@ build:jira-8.22-docker:
   <<: *job-packer-build
   stage: build
   cache:
-    key: "$CI_PIPELINE_ID-jira-8.22-docker"
+    key: $CI_PIPELINE_ID-jira-8.22-docker
     paths:
       - packer/*/output-docker
   variables:
-    _IMAGE: "jira-8.22"
-    _PROVIDER: "docker"
+    _IMAGE: jira-8.22
+    _PROVIDER: docker
 
 test:jira-8.22-docker:
   <<: *job-molecule-test
   stage: test
   cache:
-    key: "$CI_PIPELINE_ID-jira-8.22-docker"
+    key: $CI_PIPELINE_ID-jira-8.22-docker
     paths:
       - packer/*/output-docker
     policy: pull
   variables:
-    _IMAGE: "jira-8.22"
-    _PROVIDER: "docker"
+    _IMAGE: jira-8.22
+    _PROVIDER: docker
   needs:
     - build:jira-8.22-docker
 
@@ -319,13 +319,13 @@ deploy:jira-8.22-docker:
   <<: *job-docker-push
   stage: deploy
   cache:
-    key: "$CI_PIPELINE_ID-jira-8.22-docker"
+    key: $CI_PIPELINE_ID-jira-8.22-docker
     paths:
       - packer/*/output-docker
     policy: pull
   variables:
-    _IMAGE: "jira-8.22"
-    _PROVIDER: "docker"
+    _IMAGE: jira-8.22
+    _PROVIDER: docker
   needs:
     - test:jira-8.22-docker
 
@@ -333,24 +333,24 @@ build:jira-8.20-docker:
   <<: *job-packer-build
   stage: build
   cache:
-    key: "$CI_PIPELINE_ID-jira-8.20-docker"
+    key: $CI_PIPELINE_ID-jira-8.20-docker
     paths:
       - packer/*/output-docker
   variables:
-    _IMAGE: "jira-8.20"
-    _PROVIDER: "docker"
+    _IMAGE: jira-8.20
+    _PROVIDER: docker
 
 test:jira-8.20-docker:
   <<: *job-molecule-test
   stage: test
   cache:
-    key: "$CI_PIPELINE_ID-jira-8.20-docker"
+    key: $CI_PIPELINE_ID-jira-8.20-docker
     paths:
       - packer/*/output-docker
     policy: pull
   variables:
-    _IMAGE: "jira-8.20"
-    _PROVIDER: "docker"
+    _IMAGE: jira-8.20
+    _PROVIDER: docker
   needs:
     - build:jira-8.20-docker
 
@@ -358,12 +358,12 @@ deploy:jira-8.20-docker:
   <<: *job-docker-push
   stage: deploy
   cache:
-    key: "$CI_PIPELINE_ID-jira-8.20-docker"
+    key: $CI_PIPELINE_ID-jira-8.20-docker
     paths:
       - packer/*/output-docker
     policy: pull
   variables:
-    _IMAGE: "jira-8.20"
-    _PROVIDER: "docker"
+    _IMAGE: jira-8.20
+    _PROVIDER: docker
   needs:
     - test:jira-8.20-docker
