@@ -20,18 +20,18 @@ Learn more about Jira: <https://www.atlassian.com/software/jira>
 
 ## Supported Tags and Respective Packer Template Links
 
--   [`alvistack/jira-9.16`](https://hub.docker.com/r/alvistack/jira-9.16)
-    -   [`packer/docker-9.16/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.16/packer.json)
--   [`alvistack/jira-9.15`](https://hub.docker.com/r/alvistack/jira-9.15)
-    -   [`packer/docker-9.15/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.15/packer.json)
--   [`alvistack/jira-9.12`](https://hub.docker.com/r/alvistack/jira-9.12)
-    -   [`packer/docker-9.12/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.12/packer.json)
--   [`alvistack/jira-9.4`](https://hub.docker.com/r/alvistack/jira-9.4)
-    -   [`packer/docker-9.4/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.4/packer.json)
--   [`alvistack/jira-8.22`](https://hub.docker.com/r/alvistack/jira-8.22)
-    -   [`packer/docker-8.22/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-8.22/packer.json)
--   [`alvistack/jira-8.20`](https://hub.docker.com/r/alvistack/jira-8.20)
-    -   [`packer/docker-8.20/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-8.20/packer.json)
+- [`alvistack/jira-9.16`](https://hub.docker.com/r/alvistack/jira-9.16)
+  - [`packer/docker-9.16/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.16/packer.json)
+- [`alvistack/jira-9.15`](https://hub.docker.com/r/alvistack/jira-9.15)
+  - [`packer/docker-9.15/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.15/packer.json)
+- [`alvistack/jira-9.12`](https://hub.docker.com/r/alvistack/jira-9.12)
+  - [`packer/docker-9.12/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.12/packer.json)
+- [`alvistack/jira-9.4`](https://hub.docker.com/r/alvistack/jira-9.4)
+  - [`packer/docker-9.4/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.4/packer.json)
+- [`alvistack/jira-8.22`](https://hub.docker.com/r/alvistack/jira-8.22)
+  - [`packer/docker-8.22/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-8.22/packer.json)
+- [`alvistack/jira-8.20`](https://hub.docker.com/r/alvistack/jira-8.20)
+  - [`packer/docker-8.20/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-8.20/packer.json)
 
 ## Overview
 
@@ -41,10 +41,10 @@ running.
 Based on [Official Ubuntu Docker
 Image](https://hub.docker.com/_/ubuntu/) with some minor hack:
 
--   Packaging by Packer Docker builder and Ansible provisioner in single
-    layer
--   Handle `ENTRYPOINT` with
-    [catatonit](https://github.com/openSUSE/catatonit)
+- Packaging by Packer Docker builder and Ansible provisioner in single
+  layer
+- Handle `ENTRYPOINT` with
+  [catatonit](https://github.com/openSUSE/catatonit)
 
 ### Quick Start
 
@@ -117,12 +117,12 @@ latest packages provided by the base image project.
 
 ## License
 
--   Code released under [Apache License 2.0](LICENSE)
--   Docs released under [CC BY
-    4.0](http://creativecommons.org/licenses/by/4.0/)
+- Code released under [Apache License 2.0](LICENSE)
+- Docs released under [CC BY
+  4.0](http://creativecommons.org/licenses/by/4.0/)
 
 ## Author Information
 
--   Wong Hoi Sing Edison
-    -   <https://twitter.com/hswong3i>
-    -   <https://github.com/hswong3i>
+- Wong Hoi Sing Edison
+  - <https://twitter.com/hswong3i>
+  - <https://github.com/hswong3i>
