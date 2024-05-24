@@ -9,7 +9,7 @@ tag](https://img.shields.io/github/tag/alvistack/docker-jira.svg)](https://githu
 [![GitHub
 license](https://img.shields.io/github/license/alvistack/docker-jira.svg)](https://github.com/alvistack/docker-jira/blob/master/LICENSE)
 [![Docker
-Pulls](https://img.shields.io/docker/pulls/alvistack/jira-9.15.svg)](https://hub.docker.com/r/alvistack/jira-9.15)
+Pulls](https://img.shields.io/docker/pulls/alvistack/jira-9.16.svg)](https://hub.docker.com/r/alvistack/jira-9.16)
 
 Jira Software unlocks the power of agile by giving your team the tools
 to easily create & estimate stories, build a sprint backlog, identify
@@ -20,18 +20,18 @@ Learn more about Jira: <https://www.atlassian.com/software/jira>
 
 ## Supported Tags and Respective Packer Template Links
 
--   [`alvistack/jira-9.15`](https://hub.docker.com/r/alvistack/jira-9.15)
-    -   [`packer/docker-9.15/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.15/packer.json)
--   [`alvistack/jira-9.14`](https://hub.docker.com/r/alvistack/jira-9.14)
-    -   [`packer/docker-9.14/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.14/packer.json)
--   [`alvistack/jira-9.12`](https://hub.docker.com/r/alvistack/jira-9.12)
-    -   [`packer/docker-9.12/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.12/packer.json)
--   [`alvistack/jira-9.4`](https://hub.docker.com/r/alvistack/jira-9.4)
-    -   [`packer/docker-9.4/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.4/packer.json)
--   [`alvistack/jira-8.22`](https://hub.docker.com/r/alvistack/jira-8.22)
-    -   [`packer/docker-8.22/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-8.22/packer.json)
--   [`alvistack/jira-8.20`](https://hub.docker.com/r/alvistack/jira-8.20)
-    -   [`packer/docker-8.20/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-8.20/packer.json)
+- [`alvistack/jira-9.16`](https://hub.docker.com/r/alvistack/jira-9.16)
+  - [`packer/docker-9.16/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.16/packer.json)
+- [`alvistack/jira-9.15`](https://hub.docker.com/r/alvistack/jira-9.15)
+  - [`packer/docker-9.15/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.15/packer.json)
+- [`alvistack/jira-9.12`](https://hub.docker.com/r/alvistack/jira-9.12)
+  - [`packer/docker-9.12/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.12/packer.json)
+- [`alvistack/jira-9.4`](https://hub.docker.com/r/alvistack/jira-9.4)
+  - [`packer/docker-9.4/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-9.4/packer.json)
+- [`alvistack/jira-8.22`](https://hub.docker.com/r/alvistack/jira-8.22)
+  - [`packer/docker-8.22/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-8.22/packer.json)
+- [`alvistack/jira-8.20`](https://hub.docker.com/r/alvistack/jira-8.20)
+  - [`packer/docker-8.20/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-8.20/packer.json)
 
 ## Overview
 
@@ -41,10 +41,10 @@ running.
 Based on [Official Ubuntu Docker
 Image](https://hub.docker.com/_/ubuntu/) with some minor hack:
 
--   Packaging by Packer Docker builder and Ansible provisioner in single
-    layer
--   Handle `ENTRYPOINT` with
-    [catatonit](https://github.com/openSUSE/catatonit)
+- Packaging by Packer Docker builder and Ansible provisioner in single
+  layer
+- Handle `ENTRYPOINT` with
+  [catatonit](https://github.com/openSUSE/catatonit)
 
 ### Quick Start
 
@@ -59,7 +59,7 @@ can use a data volume, or named volumes.
 Start Atlassian Jira Server:
 
     # Pull latest image
-    docker pull alvistack/jira-9.15
+    docker pull alvistack/jira-9.16
 
     # Run as detach
     docker run \
@@ -67,7 +67,7 @@ Start Atlassian Jira Server:
         --name jira \
         --publish 8080:8080 \
         --volume /var/atlassian/application-data/jira:/var/atlassian/application-data/jira \
-        alvistack/jira-9.15
+        alvistack/jira-9.16
 
 **Success**. Jira is now available on <http://localhost:8080>
 
@@ -117,12 +117,12 @@ latest packages provided by the base image project.
 
 ## License
 
--   Code released under [Apache License 2.0](LICENSE)
--   Docs released under [CC BY
-    4.0](http://creativecommons.org/licenses/by/4.0/)
+- Code released under [Apache License 2.0](LICENSE)
+- Docs released under [CC BY
+  4.0](http://creativecommons.org/licenses/by/4.0/)
 
 ## Author Information
 
--   Wong Hoi Sing Edison
-    -   <https://twitter.com/hswong3i>
-    -   <https://github.com/hswong3i>
+- Wong Hoi Sing Edison
+  - <https://twitter.com/hswong3i>
+  - <https://github.com/hswong3i>
