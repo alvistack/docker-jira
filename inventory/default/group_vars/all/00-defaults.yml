@@ -23,8 +23,8 @@ jira_jvm_minimum_memory: 2048m
 jira_jvm_maximum_memory: 2048m
 jira_jvm_reserved_code_cache_size: 512m
 jira_catalina_connector_port: "8080"
-jira_catalina_connector_scheme:
-jira_catalina_connector_secure:
+jira_catalina_connector_scheme: "http"
+jira_catalina_connector_secure: "false"
 jira_catalina_connector_proxyname:
 jira_catalina_connector_proxyport:
 jira_catalina_context_path:
@@ -32,5 +32,10 @@ jira_jvm_support_recommended_args: >-
   -Datlassian.plugins.enable.wait=300
   -XX:+IgnoreUnrecognizedVMOptions
   -XX:+UnlockExperimentalVMOptions
+jira_jvm_gc_args: >-
+  -XX:+UseZGC
+  -XX:ZCollectionInterval=5
+  -XX:ZAllocationSpikeTolerance=5
+  -XX:+ExplicitGCInvokesConcurrent
 jira_session_timeout: "120"
 jira_autologin_cookie_age: "10080"
