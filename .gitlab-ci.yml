@@ -212,45 +212,6 @@ deploy:jira-10.3-docker:
   needs:
     - test:jira-10.3-docker
 
-build:jira-9.17-docker:
-  <<: *job-packer-build
-  stage: build
-  cache:
-    key: $CI_PIPELINE_ID-jira-9.17-docker
-    paths:
-      - packer/*/output-docker
-  variables:
-    _IMAGE: jira-9.17
-    _PROVIDER: docker
-
-test:jira-9.17-docker:
-  <<: *job-molecule-test
-  stage: test
-  cache:
-    key: $CI_PIPELINE_ID-jira-9.17-docker
-    paths:
-      - packer/*/output-docker
-    policy: pull
-  variables:
-    _IMAGE: jira-9.17
-    _PROVIDER: docker
-  needs:
-    - build:jira-9.17-docker
-
-deploy:jira-9.17-docker:
-  <<: *job-docker-push
-  stage: deploy
-  cache:
-    key: $CI_PIPELINE_ID-jira-9.17-docker
-    paths:
-      - packer/*/output-docker
-    policy: pull
-  variables:
-    _IMAGE: jira-9.17
-    _PROVIDER: docker
-  needs:
-    - test:jira-9.17-docker
-
 build:jira-9.12-docker:
   <<: *job-packer-build
   stage: build
@@ -289,42 +250,3 @@ deploy:jira-9.12-docker:
     _PROVIDER: docker
   needs:
     - test:jira-9.12-docker
-
-build:jira-9.4-docker:
-  <<: *job-packer-build
-  stage: build
-  cache:
-    key: $CI_PIPELINE_ID-jira-9.4-docker
-    paths:
-      - packer/*/output-docker
-  variables:
-    _IMAGE: jira-9.4
-    _PROVIDER: docker
-
-test:jira-9.4-docker:
-  <<: *job-molecule-test
-  stage: test
-  cache:
-    key: $CI_PIPELINE_ID-jira-9.4-docker
-    paths:
-      - packer/*/output-docker
-    policy: pull
-  variables:
-    _IMAGE: jira-9.4
-    _PROVIDER: docker
-  needs:
-    - build:jira-9.4-docker
-
-deploy:jira-9.4-docker:
-  <<: *job-docker-push
-  stage: deploy
-  cache:
-    key: $CI_PIPELINE_ID-jira-9.4-docker
-    paths:
-      - packer/*/output-docker
-    policy: pull
-  variables:
-    _IMAGE: jira-9.4
-    _PROVIDER: docker
-  needs:
-    - test:jira-9.4-docker
