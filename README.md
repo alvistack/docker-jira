@@ -9,7 +9,7 @@ tag](https://img.shields.io/github/tag/alvistack/docker-jira.svg)](https://githu
 [![GitHub
 license](https://img.shields.io/github/license/alvistack/docker-jira.svg)](https://github.com/alvistack/docker-jira/blob/master/LICENSE)
 [![Docker
-Pulls](https://img.shields.io/docker/pulls/alvistack/jira-10.4.svg)](https://hub.docker.com/r/alvistack/jira-10.4)
+Pulls](https://img.shields.io/docker/pulls/alvistack/jira-10.5.svg)](https://hub.docker.com/r/alvistack/jira-10.5)
 
 Jira Software unlocks the power of agile by giving your team the tools
 to easily create & estimate stories, build a sprint backlog, identify
@@ -20,8 +20,8 @@ Learn more about Jira: <https://www.atlassian.com/software/jira>
 
 ## Supported Tags and Respective Packer Template Links
 
-- [`alvistack/jira-10.4`](https://hub.docker.com/r/alvistack/jira-10.4)
-  - [`packer/docker-10.4/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-10.4/packer.json)
+- [`alvistack/jira-10.5`](https://hub.docker.com/r/alvistack/jira-10.5)
+  - [`packer/docker-10.5/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-10.5/packer.json)
 - [`alvistack/jira-10.3`](https://hub.docker.com/r/alvistack/jira-10.3)
   - [`packer/docker-10.3/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-10.3/packer.json)
 - [`alvistack/jira-9.12`](https://hub.docker.com/r/alvistack/jira-9.12)
@@ -53,7 +53,7 @@ can use a data volume, or named volumes.
 Start Atlassian Jira Server:
 
     # Pull latest image
-    docker pull alvistack/jira-10.4
+    docker pull alvistack/jira-10.5
 
     # Run as detach
     docker run \
@@ -61,7 +61,7 @@ Start Atlassian Jira Server:
         --name jira \
         --publish 8080:8080 \
         --volume /var/atlassian/application-data/jira:/var/atlassian/application-data/jira \
-        alvistack/jira-10.4
+        alvistack/jira-10.5
 
 **Success**. Jira is now available on <http://localhost:8080>
 
