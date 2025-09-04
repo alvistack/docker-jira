@@ -173,45 +173,6 @@ deploy:jira-11.0-docker:
   needs:
     - test:jira-11.0-docker
 
-build:jira-10.7-docker:
-  <<: *job-packer-build
-  stage: build
-  cache:
-    key: $CI_PIPELINE_ID-jira-10.7-docker
-    paths:
-      - packer/*/output-docker
-  variables:
-    _IMAGE: jira-10.7
-    _PROVIDER: docker
-
-test:jira-10.7-docker:
-  <<: *job-molecule-test
-  stage: test
-  cache:
-    key: $CI_PIPELINE_ID-jira-10.7-docker
-    paths:
-      - packer/*/output-docker
-    policy: pull
-  variables:
-    _IMAGE: jira-10.7
-    _PROVIDER: docker
-  needs:
-    - build:jira-10.7-docker
-
-deploy:jira-10.7-docker:
-  <<: *job-docker-push
-  stage: deploy
-  cache:
-    key: $CI_PIPELINE_ID-jira-10.7-docker
-    paths:
-      - packer/*/output-docker
-    policy: pull
-  variables:
-    _IMAGE: jira-10.7
-    _PROVIDER: docker
-  needs:
-    - test:jira-10.7-docker
-
 build:jira-10.3-docker:
   <<: *job-packer-build
   stage: build
