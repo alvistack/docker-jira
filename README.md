@@ -22,8 +22,6 @@ Learn more about Jira: <https://www.atlassian.com/software/jira>
 
 - [`alvistack/jira-11.0`](https://hub.docker.com/r/alvistack/jira-11.0)
   - [`packer/docker-11.0/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-11.0/packer.json)
-- [`alvistack/jira-10.7`](https://hub.docker.com/r/alvistack/jira-10.7)
-  - [`packer/docker-10.7/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-10.7/packer.json)
 - [`alvistack/jira-10.3`](https://hub.docker.com/r/alvistack/jira-10.3)
   - [`packer/docker-10.3/packer.json`](https://github.com/alvistack/docker-jira/blob/master/packer/docker-10.3/packer.json)
 - [`alvistack/jira-9.12`](https://hub.docker.com/r/alvistack/jira-9.12)
